@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "target": "es2020",
+    "lib": ["es2020"],
+    "newLine": "lf",
+    "outDir": "build",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src/**/*.ts"]
+}

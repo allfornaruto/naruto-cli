@@ -1,0 +1,5 @@
+export enum EventName {
+<% Object.keys(rows).forEach(key => { -%>
+	<%= key %> = "<%= rows[key] %>",
+<% });-%>
+}

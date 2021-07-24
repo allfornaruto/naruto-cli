@@ -1,0 +1,10 @@
+node_modules
+
+build
+
+output/event/*
+output/json/*
+output/jsonForXml/*
+output/xml/*
+
+!.gitkeep
