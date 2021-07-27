@@ -85,7 +85,7 @@ naruto-cli excel2eventTs ./excel/event ./output/event
 ### 参数说明
 
 - `<key>`
-  - 在https://tinypng.com注册获取到的key，每个用户有500张/月的免费压缩额度
+  - 在 [https://tinypng.com] 注册获取到的 key，每个用户有 500 张/月的免费压缩额度
 - `<imgDirPath>`
   - 图片目录
 
