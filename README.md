@@ -80,7 +80,7 @@ naruto-cli excel2eventTs ./excel/event ./output/event
 
 ## **`tinifyCompressImages <key> <imgDirPath>`**
 
-使用 tinify 对图片进行压缩
+使用 tinify 对图片(.jpg/.png)进行压缩
 
 ### 参数说明
 
