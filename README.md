@@ -21,11 +21,11 @@ npm run build
   - 多语言 Excel 经过转换过输出 JSON 文件的指定目录
   - 即便指定输出目录，jsonForXml 会固定生成在 output/jsonForXml 下
 
-### Excel示例文件
+### Excel 示例文件
 
 > excel/lang/language.xlsx
 
-注意：Excel中红色部分不可修改
+注意：Excel 中红色部分不可修改
 
 ### 使用示例
 
@@ -36,7 +36,7 @@ naruto-cli excel2json ./excel/lang ./output/json
 
 ## **`json2xml <jsonForXmlDirPath> <outDirPath>`**
 
-将excel2json生成的多语言 json 文件 转 xml 文件
+将 excel2json 生成的多语言 json 文件 转 xml 文件
 
 ### 参数说明
 
@@ -65,15 +65,33 @@ naruto-cli json2xml ./output/jsonForXml ./output/xml
 - `<outDirPath>`
   - 事件 Excel 经过转换过输出 typescript 文件的指定目录
 
-### Excel示例文件
+### Excel 示例文件
 
 > excel/event/event.xlsx
 
-注意：Excel中红色部分不可修改; 事件名格式不可改变
+注意：Excel 中红色部分不可修改; 事件名格式不可改变
 
 ### 使用示例
 
 ```bash
 # 在项目根目录下执行
 naruto-cli excel2eventTs ./excel/event ./output/event
+```
+
+## **`tinifyCompressImages <key> <imgDirPath>`**
+
+使用 tinify 对图片进行压缩
+
+### 参数说明
+
+- `<key>`
+  - 在https://tinypng.com注册获取到的key，每个用户有500张/月的免费压缩额度
+- `<imgDirPath>`
+  - 图片目录
+
+### 使用示例
+
+```bash
+# 在项目根目录下执行
+naruto-cli tinifyCompressImages yourTinifyKey ./imgNeedCompress
 ```

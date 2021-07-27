@@ -36,6 +36,15 @@ program
     }
   });
 
+program.command("tinifyCompressImages <key> <imgDirPath>").action(async (key: string, imgDirPath: string) => {
+  try {
+    await cmd.tinifyCompressImages(key, imgDirPath);
+  } catch (e) {
+    console.error(e.message);
+    throw e;
+  }
+});
+
 program.parse(process.argv);
 
 process.on("unhandledRejection", e => {
