@@ -78,12 +78,15 @@ naruto-cli json2xml ./output/jsonForXml ./output/xml
 naruto-cli excel2eventTs ./excel/event ./output/event
 ```
 
-## **`tinifyCompressImages <key> <imgDirPath>`**
+## **`tinifyCompressImages [options] <key> <imgDirPath>`**
 
 使用 tinify 对图片(.jpg/.png)进行压缩
 
 ### 参数说明
 
+- `<options>`
+	- `-ms, --minSize <minSize> 低于该大小的文件会被忽略，单位KB`
+	- `-gp, --globPatterns <globPatterns> 符合该通配表达式的文件才会被压缩, 默认值为"*.png,*.jpg"`
 - `<key>`
   - 在 [https://tinypng.com] 注册获取到的 key，每个用户有 500 张/月的免费压缩额度
 - `<imgDirPath>`
@@ -93,5 +96,6 @@ naruto-cli excel2eventTs ./excel/event ./output/event
 
 ```bash
 # 在项目根目录下执行
-naruto-cli tinifyCompressImages yourTinifyKey ./imgNeedCompress
+# 压缩10KB以上的jpeg图片和jpg图片
+naruto-cli tinifyCompressImages -ms 10 -gp "*.jpg,*.jpeg" yourTinifyKey ./imgNeedCompress
 ```
