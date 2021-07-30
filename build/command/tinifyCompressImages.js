@@ -18,6 +18,8 @@ function tinifyCompressImages(key, imgDirPath, options) {
     return __awaiter(this, void 0, void 0, function* () {
         const resolveImgPath = path.resolve(imgDirPath);
         let allImgs = yield modules_1.Util.readDirRecursive(resolveImgPath, options.globPatterns);
+        console.log(`成功匹配以下图片:`);
+        console.log(allImgs);
         if (options.minSize) {
             allImgs = allImgs.filter(imgPath => {
                 const fileStates = fs.statSync(imgPath);

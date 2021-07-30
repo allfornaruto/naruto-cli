@@ -18,8 +18,7 @@ program.command("excel2json <excelDirPath> <outDirPath>").action((excelDirPath, 
         yield cmd.excel2json(excelDirPath, outDirPath);
     }
     catch (e) {
-        console.error(e.message);
-        throw e;
+        console.error(e);
     }
 }));
 program
@@ -29,8 +28,7 @@ program
         yield cmd.json2xml(jsonObjectDirPath, outDirPath);
     }
     catch (e) {
-        console.error(e.message);
-        throw e;
+        console.error(e);
     }
 }));
 program
@@ -40,8 +38,7 @@ program
         yield cmd.excel2eventTs(excelDirPath, outDirPath);
     }
     catch (e) {
-        console.error(e.message);
-        throw e;
+        console.error(e);
     }
 }));
 program
@@ -50,11 +47,11 @@ program
     .option("-gp, --globPatterns <globPatterns>", `符合该通配表达式的文件才会被压缩, 默认值为"*.png,*.jpg"`, value => value.split(","), ["*.jpg", "*.png"])
     .action((key, imgDirPath, options) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log(options);
         yield cmd.tinifyCompressImages(key, imgDirPath, options);
     }
     catch (e) {
-        console.error(e.message);
-        throw e;
+        console.error(e);
     }
 }));
 program.parse(process.argv);

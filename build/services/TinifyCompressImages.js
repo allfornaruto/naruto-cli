@@ -30,7 +30,7 @@ var TinifyCompressImages;
                 return Promise.resolve();
             }
             catch (e) {
-                return Promise.reject();
+                throw e;
             }
         });
     }

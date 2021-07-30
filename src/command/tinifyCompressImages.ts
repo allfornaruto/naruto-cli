@@ -11,7 +11,8 @@ export async function tinifyCompressImages(
 ): Promise<void> {
   const resolveImgPath = path.resolve(imgDirPath);
   let allImgs = await Util.readDirRecursive(resolveImgPath, options.globPatterns);
-
+  console.log(`成功匹配以下图片:`);
+  console.log(allImgs);
   if (options.minSize) {
     allImgs = allImgs.filter(imgPath => {
       const fileStates = fs.statSync(imgPath);

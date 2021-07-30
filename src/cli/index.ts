@@ -10,8 +10,7 @@ program.command("excel2json <excelDirPath> <outDirPath>").action(async (excelDir
   try {
     await cmd.excel2json(excelDirPath, outDirPath);
   } catch (e) {
-    console.error(e.message);
-    throw e;
+    console.error(e);
   }
 });
 
@@ -21,8 +20,7 @@ program
     try {
       await cmd.json2xml(jsonObjectDirPath, outDirPath);
     } catch (e) {
-      console.error(e.message);
-      throw e;
+      console.error(e);
     }
   });
 
@@ -32,8 +30,7 @@ program
     try {
       await cmd.excel2eventTs(excelDirPath, outDirPath);
     } catch (e) {
-      console.error(e.message);
-      throw e;
+      console.error(e);
     }
   });
 
@@ -48,10 +45,10 @@ program
   )
   .action(async (key: string, imgDirPath: string, options: types.TinifyCompressImagesOptions) => {
     try {
+      console.log(options);
       await cmd.tinifyCompressImages(key, imgDirPath, options);
     } catch (e) {
-      console.error(e.message);
-      throw e;
+      console.error(e);
     }
   });
 

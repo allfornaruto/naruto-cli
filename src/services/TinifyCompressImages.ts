@@ -17,9 +17,10 @@ export module TinifyCompressImages {
       const newSize = (newFileStates.size / 1024).toFixed(2);
       const compressRate = ((1 - Number(newSize) / Number(oldSize)) * 100).toFixed(2);
       console.log(`${imgPath} 压缩成功 ${oldSize}KB -> ${newSize}KB 节省: ${compressRate}%空间`);
+
       return Promise.resolve();
     } catch (e) {
-      return Promise.reject();
+      throw e;
     }
   }
 }
