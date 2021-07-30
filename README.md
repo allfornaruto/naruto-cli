@@ -1,12 +1,20 @@
 # naruto-cli
 
-> 安装
+> 注意：执行路径不应出现中文、空格、特殊符号
+
+> 从源码安装
 
 ```bash
 # 安装依赖
 npm install
 # 全局安装cli
 npm run build
+```
+
+> 直接使用npm发布版
+
+```bash
+npm install -g naruto-cli
 ```
 
 ## **`excel2json <excelDirPath> <outDirPath>`**
@@ -80,7 +88,7 @@ naruto-cli excel2eventTs ./excel/event ./output/event
 
 ## **`tinifyCompressImages [options] <key> <imgDirPath>`**
 
-使用 tinify 对图片(.jpg/.png)进行压缩
+使用 tinify 对图片进行压缩
 
 ### 参数说明
 
@@ -90,7 +98,7 @@ naruto-cli excel2eventTs ./excel/event ./output/event
 - `<key>`
   - 在 [https://tinypng.com] 注册获取到的 key，每个用户有 500 张/月的免费压缩额度
 - `<imgDirPath>`
-  - 图片目录
+  - 图片目录，如果目录中有中文、空格、特殊符号，可以使用双引号将其包裹，如: "C:\Users\Naruto\Desktop\Img Panda"
 
 ### 使用示例
 
