@@ -1,13 +1,11 @@
 {
   "name": "naruto-cli",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "",
   "main": "build/cli/index.js",
   "scripts": {
     "prebuild": "npm uninstall -g naruto-cli && tsc",
-    "build": "npm install . -g",
-    "prepublish": "tsc",
-    "publish": "npm publish"
+    "build": "npm install . -g"
   },
   "author": "827101896@qq.com",
   "license": "ISC",
